@@ -84,7 +84,8 @@ class TextWidgetsMixin:
 
         """
         check_callback_rules(self.dg, on_change)
-        check_session_state_rules(default_value=None if value == "" else value, key=key)
+        check_session_state_rules(default_value=None if value == "" else value,
+                                  key=key)
 
         text_input_proto = TextInputProto()
         text_input_proto.label = label
@@ -191,7 +192,8 @@ class TextWidgetsMixin:
 
         """
         check_callback_rules(self.dg, on_change)
-        check_session_state_rules(default_value=None if value == "" else value, key=key)
+        check_session_state_rules(default_value=None if value == "" else value,
+                                  key=key)
 
         text_area_proto = TextAreaProto()
         text_area_proto.label = label
