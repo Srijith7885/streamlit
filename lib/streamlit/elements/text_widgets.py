@@ -12,14 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from typing import cast
 import textwrap
+from typing import cast
 
 import streamlit
 from streamlit.errors import StreamlitAPIException
 from streamlit.proto.TextArea_pb2 import TextArea as TextAreaProto
 from streamlit.proto.TextInput_pb2 import TextInput as TextInputProto
 from streamlit.state.widgets import register_widget
+
 from .form import current_form_id
 from .utils import check_callback_rules, check_session_state_rules
 
@@ -84,8 +85,7 @@ class TextWidgetsMixin:
 
         """
         check_callback_rules(self.dg, on_change)
-        check_session_state_rules(default_value=None if value == "" else value,
-                                  key=key)
+        check_session_state_rules(default_value=None if value == "" else value, key=key)
 
         text_input_proto = TextInputProto()
         text_input_proto.label = label
@@ -192,8 +192,7 @@ class TextWidgetsMixin:
 
         """
         check_callback_rules(self.dg, on_change)
-        check_session_state_rules(default_value=None if value == "" else value,
-                                  key=key)
+        check_session_state_rules(default_value=None if value == "" else value, key=key)
 
         text_area_proto = TextAreaProto()
         text_area_proto.label = label
