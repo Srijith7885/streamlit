@@ -52,23 +52,18 @@ no_indent_tooltip = "thisisatooltipwithnoindents. It has some spaces but no iden
 st.text_input("some input text", "default text", help=default_tooltip)
 st.number_input("number input", value=1, help=leading_indent_code_tooltip)
 st.checkbox("some checkbox", help=leading_indent_regular_text_tooltip)
-st.radio("best animal", ("tiger", "giraffe", "bear"), 0,
-         help=indented_code_tooltip)
+st.radio("best animal", ("tiger", "giraffe", "bear"), 0, help=indented_code_tooltip)
 st.selectbox("selectbox", ("a", "b", "c"), 0, help=default_tooltip)
-st.time_input("time", datetime(2019, 7, 6, 21, 15),
-              help=leading_indent_code_tooltip)
+st.time_input("time", datetime(2019, 7, 6, 21, 15), help=leading_indent_code_tooltip)
 st.date_input(
-    "date", datetime(2019, 7, 6, 21, 15),
-    help=leading_indent_regular_text_tooltip
+    "date", datetime(2019, 7, 6, 21, 15), help=leading_indent_regular_text_tooltip
 )
 st.slider("slider", 0, 100, 50, help=indented_code_tooltip)
 st.color_picker("color picker", help=no_indent_tooltip)
 st.file_uploader("file uploader", help=default_tooltip)
 st.multiselect(
-    "multiselect", ["a", "b", "c"], ["a", "b"],
-    help=leading_indent_code_tooltip
+    "multiselect", ["a", "b", "c"], ["a", "b"], help=leading_indent_code_tooltip
 )
 st.text_area("textarea", help=leading_indent_regular_text_tooltip)
-st.select_slider("selectslider", options=["a", "b", "c"],
-                 help=indented_code_tooltip)
+st.select_slider("selectslider", options=["a", "b", "c"], help=indented_code_tooltip)
 st.button("some button", help=no_indent_tooltip)
