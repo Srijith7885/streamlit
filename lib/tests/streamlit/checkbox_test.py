@@ -77,7 +77,7 @@ class CheckboxTest(testutil.DeltaGeneratorTestCase):
         self.assertEqual(checkbox_proto.form_id, form_proto.form_id)
 
     def test_checkbox_help_dedents(self):
-        """test that the checkbox help properly dedents in order to avoid code blocks"""
+        """Test that the checkbox help properly dedents in order to avoid code blocks"""
         st.checkbox(
             "Checkbox label",
             value=True,
