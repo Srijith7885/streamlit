@@ -255,9 +255,7 @@ block!`
   });
 
   it("Display text properly on tooltips on button", () => {
-    cy.get(".stButton [data-testid=tooltip_hover_target]").trigger(
-      "mouseover"
-    );
+    cy.get(".stButton [data-testid=tooltipHoverTarget]").trigger("mouseover");
     cy.get("[data-testid=stMarkdownContainer]").should(
       "contains.text",
       `thisisatooltipwithnoindents. It has some spaces but no idents.`
